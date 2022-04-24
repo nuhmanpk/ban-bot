@@ -29,7 +29,7 @@ async def ban(bot, message):
                 await message.reply(text="Think he is Admin, Can't Ban Admins")
             else:
                 try:
-                    await bot.kick_chat_member(chat_id=chatid, user_id=user_to_ban)
+                    await bot.ban_chat_member(chat_id=chatid, user_id=user_to_ban)
                     await message.reply_text(
                         f"Bye {message.reply_to_message.from_user.mention}"
                     )
